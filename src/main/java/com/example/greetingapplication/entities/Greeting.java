@@ -9,7 +9,7 @@ import javax.persistence.Table;
 public class Greeting {
     @Id
     private final long id;
-    private final String message;
+    private String message;
 
     public Greeting() {
         id = 0;
