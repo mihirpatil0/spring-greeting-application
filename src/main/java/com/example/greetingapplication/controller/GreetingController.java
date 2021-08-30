@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/greeting")
 public class GreetingController {
@@ -28,5 +30,11 @@ public class GreetingController {
     public Greeting getGreetingById(@RequestParam(value = "id") Long id)
     {
         return greetingService.getGreetingById(id);
+    }
+
+    @GetMapping("/allgreetings")
+    public List<Greeting> getAllGreetings()
+    {
+        return greetingService.getAllGreetings();
     }
 }
