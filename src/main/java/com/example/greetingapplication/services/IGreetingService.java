@@ -5,4 +5,5 @@ import com.example.greetingapplication.entities.User;
 
 public interface IGreetingService {
     Greeting addGreeting(User user);
+    Greeting getGreetingById(long id);
 }
